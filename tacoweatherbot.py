@@ -33,7 +33,7 @@ weather_state = weather_json["consolidated_weather"][0]["weather_state_name"]
 weather_string = "The temperature is {}°F with a {}% chance of {}".format(str(current_temp), str(predictability), weather_state)
 
 
-status = taco_of_the_day + "\n\n" + weather_string
+status = taco_of_the_day + "\n\n" + weather_string ++ "\n\nVisit BradleyGlasser.com"
 tweet_data = {"number":ID_NUMBER, "tweetText":status}
 requests.post(POST_TWEET_LINK, data=tweet_data)
 
